@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Tooltip from './Tooltip'
+import { FaCopy, FaFilePdf } from 'react-icons/fa'
 
 export default function ResultCard({result, onCopy, onDownload, suggestions = []}){
   const [open, setOpen] = useState(false)
@@ -14,8 +15,8 @@ export default function ResultCard({result, onCopy, onDownload, suggestions = []
           <div className="text-sm text-gray-300">Rincian PPh, PPN, dan BPHTB</div>
         </div>
         <div className="space-x-2">
-          <button onClick={onCopy} className="px-3 py-1 bg-watercolor-500 rounded text-white">Salin Hasil</button>
-          <button onClick={onDownload} className="px-3 py-1 bg-gray-700 rounded text-white">Unduh PDF</button>
+          <button onClick={onCopy} className="btn btn-accent"><FaCopy/> Salin Hasil</button>
+          <button onClick={onDownload} className="btn btn-pdf"><FaFilePdf/> Unduh PDF</button>
         </div>
       </div>
 

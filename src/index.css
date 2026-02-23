@@ -24,3 +24,12 @@ body{
   background: linear-gradient(135deg, rgba(78,165,165,0.12), rgba(63,128,128,0.08));
   border-radius: 12px;
 }
+
+/* Button utility classes */
+.btn{ @apply inline-flex items-center gap-2 px-3 py-2 rounded-md font-medium }
+.btn-primary{ @apply bg-green-600 text-white }
+.btn-secondary{ @apply bg-gray-600 text-white }
+.btn-accent{ @apply bg-blue-600 text-white }
+.btn-pdf{ @apply bg-indigo-600 text-white }
+
+.btn:active{ transform: translateY(1px) }

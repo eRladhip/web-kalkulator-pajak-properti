@@ -3,6 +3,7 @@ import { calculateTaxes, IDR } from '../utils/taxUtils'
 import ResultCard from './ResultCard'
 import HistoryList from './HistoryList'
 import Tooltip from './Tooltip'
+import { FaCopy, FaFilePdf, FaSyncAlt, FaHistory, FaUserTie } from 'react-icons/fa'
 
 const STORAGE_KEY = 'kalkulatorPajakHistory'
 
@@ -152,12 +153,12 @@ export default function CalculatorForm(){
         </div>
 
         <div className="md:col-span-2 flex gap-2 mt-2">
-          <button type="submit" className="px-4 py-2 bg-green-600 rounded text-white">Hitung</button>
-          <button type="button" onClick={onReset} className="px-4 py-2 bg-gray-600 rounded text-white">Reset</button>
-          <button type="button" onClick={onCopy} className="px-4 py-2 bg-blue-600 rounded text-white">Salin Hasil</button>
-          <button type="button" onClick={onDownload} className="px-4 py-2 bg-indigo-600 rounded text-white">Unduh PDF</button>
+          <button type="submit" className="btn btn-primary"> <FaCalculator className="inline"/> Hitung</button>
+          <button type="button" onClick={onReset} className="btn btn-secondary"> <FaSyncAlt/> Reset</button>
+          <button type="button" onClick={onCopy} className="btn btn-accent"> <FaCopy/> Salin Hasil</button>
+          <button type="button" onClick={onDownload} className="btn btn-pdf"> <FaFilePdf/> Unduh PDF</button>
           <label className="ml-auto flex items-center gap-2 text-sm">
-            <input type="checkbox" checked={consultantMode} onChange={(e)=>setConsultantMode(e.target.checked)} /> Mode Konsultan
+            <input type="checkbox" checked={consultantMode} onChange={(e)=>setConsultantMode(e.target.checked)} /> <FaUserTie/> Mode Konsultan
           </label>
         </div>
       </form>
